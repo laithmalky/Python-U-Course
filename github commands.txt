@@ -1,0 +1,7 @@
+git init
+
+git add .
+
+git commit -am "initial commit"
+
+git remote add origin https://github.com/laithmalky/Day4-Python-U-Cource.git
