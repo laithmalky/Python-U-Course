@@ -7,8 +7,16 @@
 
 # create first function
 
+# 4 spaces is the general
 def first_function():
     print("How r u?")
     print("Bye bye")
 
 first_function()
+
+
+# it runs in 2 spaces !
+def hello():
+  print("hi")
+
+hello()
