@@ -8,4 +8,8 @@ print(word)
 
 user_input = input("Please write a letter: ").lower()
 
-print(user_input)
+for letter in word:
+    if user_input == letter.lower():
+        print("Right")
+    else:
+        print("Wrong")
