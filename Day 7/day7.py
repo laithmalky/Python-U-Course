@@ -9,7 +9,7 @@ word = random.choice(words_list)
 print(word)
 
 under_score = ""
-for blanks in range(0,len(word)):
+for blanks in range(len(word)):
     under_score += "_"
 print(under_score)
 
