@@ -13,14 +13,27 @@ for blanks in range(len(word)):
     under_score += "_"
 print(under_score)
 
-user_input = input("Please write a letter: ").lower()
+game_over = True
+correct_word = []
+i = ""
 
-guesses = ""
-for letter in word:
-    if user_input == letter.lower():
-        guesses += letter
-        #print("Right")
-    else:
-        guesses += "_"
-        #print("Wrong")
-print(guesses)
+while game_over != False:
+
+    guesses = ""
+    user_input = input("Please write a letter: ").lower()
+    for letter in word:
+        if user_input == letter.lower():
+            guesses += letter
+            correct_word.append(user_input)
+            i += user_input
+            #print("Right")
+        elif letter in i:
+            guesses += letter
+        else:
+            guesses += "_"
+            #print("Wrong")
+    print(guesses)
+
+    if "_" not in guesses:
+        print("You Win!")
+        game_over = False
