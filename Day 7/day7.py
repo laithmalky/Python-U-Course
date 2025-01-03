@@ -71,12 +71,11 @@ import words_list
 # word = words_list[random.randint(0, len(words_list))]
 
 print(art_list.art)
-print(art_list.stages[0])
+print("Welcome to the hangman game")
 
 word = random.choice(words_list.words_listing)
 
-
-print(word)
+#print(word)
 
 under_score = ""
 for blanks in range(len(word)):
@@ -99,25 +98,24 @@ while game_over != False:
             correct_word.append(user_input)
             i += user_input
             #print("Right")
-        elif letter in i: # we can use correct_word list in the place of i and both r the same
+        elif letter in i: # we can use correct_word list in the place of i and both are the same
             guesses += letter
         else:
             guesses += "_"
             #print("Wrong")
-
-    print(art_list.stages[lives])
-    print(guesses)
 
     if user_input not in word:
         lives -= 1
         # if lives == 0:
         #     print("You Loose!")
         #     game_over = False
+    
+    print(art_list.stages[lives])
+    print(guesses)
 
     if "_" not in guesses:
-        print("You Win!")
+        print("********** You Win **********")
         game_over = False
     elif lives == 0:
-        print("You Loose!")
+        print("********** You Lost **********")
         game_over = False
-    
