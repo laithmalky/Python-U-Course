@@ -1,5 +1,5 @@
 from random import choice
-import art_list
+from art_list import stages, art
 from words_list import words_listing
 # using from better than using import because we don't have to use the module name before the function or variable name
 
@@ -76,11 +76,11 @@ def under_score_fun(word):
     return under_score
 
 def prints(lives, guesses):
-    print(art_list.stages[lives])
+    print(stages[lives])
     print(guesses)
 
 
-print(art_list.art)
+print(art)
 print("Welcome to the hangman game!")
 
 word = choice(words_listing)
