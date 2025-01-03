@@ -91,11 +91,12 @@ while game_over != False:
             #print("Right")
         elif letter in i: # we can use correct_word list in the place of i and both r the same
             guesses += letter
-        elif user_input not in word:
-            lives -=1
         else:
             guesses += "_"
             #print("Wrong")
+
+    if user_input not in word:
+        lives -=1
     print(stages[lives])
     print(guesses)
 
