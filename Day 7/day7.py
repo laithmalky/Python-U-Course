@@ -83,8 +83,8 @@ for blanks in range(len(word)):
 print(under_score)
 
 game_over = True
-correct_word = []
-i = ""
+correct_word_list = []
+correct_word = ""
 
 lives = 6
 
@@ -95,10 +95,10 @@ while game_over != False:
     for letter in word:
         if user_input == letter:
             guesses += letter
-            correct_word.append(user_input)
-            i += user_input
+            correct_word_list.append(user_input)
+            correct_word += user_input
             #print("Right")
-        elif letter in i: # we can use correct_word list in the place of i and both are the same
+        elif letter in correct_word: # we can use correct_word_list in the place of i and both are the same
             guesses += letter
         else:
             guesses += "_"
