@@ -95,15 +95,19 @@ while game_over != False:
             guesses += "_"
             #print("Wrong")
 
-    if user_input not in word:
-        lives -=1
     print(stages[lives])
     print(guesses)
+
+    if user_input not in word:
+        lives -=1
+        if lives == 0:
+            print("You Loose!")
+            game_over = False
 
     if "_" not in guesses:
         print("You Win!")
         game_over = False
-    elif lives == 0:
-        print("You Loose!")
-        game_over = False
+    # elif lives == 0:
+    #     print("You Loose!")
+    #     game_over = False
     
