@@ -1,68 +1,76 @@
 import random
+import art_list
 
 words_list = ["apple", "welcome", "hello"]
 
-stages = [
-    '''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
- ========
 
-''','''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
- ========
-''','''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
- ========
-''','''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
- ========
-''','''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
- ========
-''','''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
- ========
-''','''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
- ========
-'''
-]
+# stages = [
+#     '''
+#   +---+
+#   |   |
+#   O   |
+#  /|\  |
+#  / \  |
+#       |
+#  ========
+
+# ''','''
+#   +---+
+#   |   |
+#   O   |
+#  /|\  |
+#  /    |
+#       |
+#  ========
+# ''','''
+#   +---+
+#   |   |
+#   O   |
+#  /|\  |
+#       |
+#       |
+#  ========
+# ''','''
+#   +---+
+#   |   |
+#   O   |
+#  /|   |
+#       |
+#       |
+#  ========
+# ''','''
+#   +---+
+#   |   |
+#   O   |
+#   |   |
+#       |
+#       |
+#  ========
+# ''','''
+#   +---+
+#   |   |
+#   O   |
+#       |
+#       |
+#       |
+#  ========
+# ''','''
+#   +---+
+#   |   |
+#       |
+#       |
+#       |
+#       |
+#  ========
+# '''
+# ]
+
+
 # word = words_list[random.randint(0, len(words_list))]
+
+print(art_list.art)
+print(art_list.stages[0])
+
 word = random.choice(words_list)
 
 
@@ -95,19 +103,19 @@ while game_over != False:
             guesses += "_"
             #print("Wrong")
 
-    print(stages[lives])
+    print(art_list.stages[lives])
     print(guesses)
 
     if user_input not in word:
-        lives -=1
-        if lives == 0:
-            print("You Loose!")
-            game_over = False
+        lives -= 1
+        # if lives == 0:
+        #     print("You Loose!")
+        #     game_over = False
 
     if "_" not in guesses:
         print("You Win!")
         game_over = False
-    # elif lives == 0:
-    #     print("You Loose!")
-    #     game_over = False
+    elif lives == 0:
+        print("You Loose!")
+        game_over = False
     
