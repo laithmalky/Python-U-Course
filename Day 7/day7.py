@@ -1,7 +1,7 @@
-import random
+from random import choice
 import art_list
-import words_list
-
+from words_list import words_listing
+# using from better than using import because we don't have to use the module name before the function or variable name
 
 # words_list = ["apple", "welcome", "hello"]
 
@@ -83,7 +83,7 @@ def prints(lives, guesses):
 print(art_list.art)
 print("Welcome to the hangman game!")
 
-word = random.choice(words_list.words_listing)
+word = choice(words_listing)
 
 #print(word)
 
