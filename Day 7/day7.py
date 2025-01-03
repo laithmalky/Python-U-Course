@@ -2,6 +2,66 @@ import random
 
 words_list = ["apple", "welcome", "hello"]
 
+stages = [
+    '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+ ========
+
+''','''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+ ========
+''','''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+ ========
+''','''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+ ========
+''','''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+ ========
+''','''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+ ========
+''','''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+ ========
+'''
+]
 # word = words_list[random.randint(0, len(words_list))]
 word = random.choice(words_list)
 
@@ -31,13 +91,18 @@ while game_over != False:
             #print("Right")
         elif letter in i: # we can use correct_word list in the place of i and both r the same
             guesses += letter
+        elif user_input not in word:
+            lives -=1
         else:
             guesses += "_"
             #print("Wrong")
+    print(stages[lives])
     print(guesses)
 
     if "_" not in guesses:
         print("You Win!")
         game_over = False
-    else:
-        lives -= 1
+    elif lives == 0:
+        print("You Loose!")
+        game_over = False
+    
