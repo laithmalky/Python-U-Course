@@ -1,7 +1,9 @@
 import random
 import art_list
+import words_list
 
-words_list = ["apple", "welcome", "hello"]
+
+# words_list = ["apple", "welcome", "hello"]
 
 
 # stages = [
@@ -71,7 +73,7 @@ words_list = ["apple", "welcome", "hello"]
 print(art_list.art)
 print(art_list.stages[0])
 
-word = random.choice(words_list)
+word = random.choice(words_list.words_listing)
 
 
 print(word)
