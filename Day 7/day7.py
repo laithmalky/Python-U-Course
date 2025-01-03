@@ -69,18 +69,30 @@ import words_list
 
 
 # word = words_list[random.randint(0, len(words_list))]
+def under_score_fun(word):
+    under_score = ""
+    for blanks in range(len(word)):
+        under_score += "_"
+    return under_score
+
+def prints(lives, guesses):
+    print(art_list.stages[lives])
+    print(guesses)
+
 
 print(art_list.art)
-print("Welcome to the hangman game")
+print("Welcome to the hangman game!")
 
 word = random.choice(words_list.words_listing)
 
-print(word)
+#print(word)
 
-under_score = ""
-for blanks in range(len(word)):
-    under_score += "_"
-print(under_score)
+print(f'{under_score_fun(word)}\n')
+
+# under_score = ""
+# for blanks in range(len(word)):
+#     under_score += "_"
+# print(under_score)
 
 game_over = True
 correct_word_list = []
@@ -88,6 +100,7 @@ correct_word = ""
 
 lives = 6
 used_before = False
+not_in_word = False
 
 while game_over != False:
 
@@ -95,7 +108,6 @@ while game_over != False:
     user_input = input("Please write a letter: ").lower()
     if user_input in correct_word:
         used_before = True
-        lives -= 1
 
     for letter in word:
         if user_input == letter:
@@ -114,18 +126,25 @@ while game_over != False:
 
     if user_input not in word:
         lives -= 1
-        print(f'This letter is not in the word: {user_input}')
+        not_in_word = True
         # if lives == 0:
         #     print("You Loose!")
         #     game_over = False
     
+    prints(lives, guesses)
 
-    print(art_list.stages[lives])
-    print(guesses)
+    # print(art_list.stages[lives])
+    # print(guesses)
+
     if used_before == True:
         print(f'You used this letter before: {user_input}')
         used_before = False
 
+    if not_in_word == True:
+        print(f'This letter is not in the word: {user_input}')
+        not_in_word = False
+
+    print(f'********** {lives}/6 Lives left **********')
 
     if "_" not in guesses:
         print("********** You Win **********")
