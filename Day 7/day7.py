@@ -147,8 +147,8 @@ while game_over != False:
     print(f'********** {lives}/6 LIVES LEFT **********')
 
     if "_" not in guesses:
-        print("********** YOU WIN **********")
+        print(F'********** YOU WIN **********')
         game_over = False
     elif lives == 0:
-        print("********** YOU LOST **********")
+        print(F'********** IT WAS {word}! YOU LOST **********')
         game_over = False
