@@ -144,11 +144,11 @@ while game_over != False:
         print(f'This letter is not in the word: {user_input}')
         not_in_word = False
 
-    print(f'********** {lives}/6 Lives left **********')
+    print(f'********** {lives}/6 LIVES LEFT **********')
 
     if "_" not in guesses:
-        print("********** You Win **********")
+        print("********** YOU WIN **********")
         game_over = False
     elif lives == 0:
-        print("********** You Lost **********")
+        print("********** YOU LOST **********")
         game_over = False
