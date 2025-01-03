@@ -123,6 +123,7 @@ while game_over != False:
     print(guesses)
     if used_before == True:
         print("You used this letter before !")
+        used_before = False
 
 
     if "_" not in guesses:
