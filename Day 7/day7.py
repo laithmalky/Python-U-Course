@@ -114,6 +114,7 @@ while game_over != False:
 
     if user_input not in word:
         lives -= 1
+        print(f'This letter is not in the word: {user_input}')
         # if lives == 0:
         #     print("You Loose!")
         #     game_over = False
@@ -122,7 +123,7 @@ while game_over != False:
     print(art_list.stages[lives])
     print(guesses)
     if used_before == True:
-        print("You used this letter before !")
+        print(f'You used this letter before: {user_input}')
         used_before = False
 
 
