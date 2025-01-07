@@ -22,3 +22,4 @@ def greet_with(name, location):
     print(f'Good Night {name} from {location}')
 
 greet_with('John', 'New York')
+#greet_with('New York', 'John') # Order of arguments matters "Positional Arguments"
