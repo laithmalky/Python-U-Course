@@ -23,3 +23,12 @@ def greet_with(name, location):
 
 greet_with('John', 'New York')
 #greet_with('New York', 'John') # Order of arguments matters "Positional Arguments"
+
+
+# Function with keyword arguments
+def greet_with_keyword(name, location):
+    print(f'Hello, {name}')
+    print(f'Good Morning {name} from {location}')
+    print(f'Good Night {name} from {location}')
+
+greet_with_keyword(location='New York', name='John') # Order of arguments doesn't matter "Keyword Arguments"
