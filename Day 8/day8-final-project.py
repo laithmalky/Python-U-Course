@@ -1,3 +1,5 @@
+from art import logo
+
 
 letters = []
 
