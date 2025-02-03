@@ -112,6 +112,7 @@ def decrypt(de_text, de_shift):
 
 
 
+
 # encrypt(text, shift) if type_of_encode == 'encode' else decrypt(text, shift)
 
 keep_going = 'yes'
