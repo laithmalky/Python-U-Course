@@ -1,5 +1,7 @@
 from art import logo
 
+print(logo)
+print('Welcome to the Caesar Cipher program')
 
 letters = []
 
