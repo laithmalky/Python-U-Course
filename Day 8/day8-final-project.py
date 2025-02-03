@@ -4,11 +4,17 @@ letters = []
 for i in range(ord('a'), ord('z')+1):
     letters.append(chr(i))
 
+
+
+'''
 type_of_encode = input('Type "encode" to encrypt, type "decode" to decrypt:\n').lower()
 
 o_text = input('Type your message:\n').lower()
 
 o_shift = int(input('Type the shift number:\n'))
+'''
+
+
 
 '''
 def caesar(text, shift, type_of):
@@ -36,6 +42,7 @@ def caesar(text, shift, type_of):
         else:
             encrypted_text += letter
     print(f'The {type_of}d text is: {encrypted_text}')
+    
         
 
 
@@ -103,4 +110,10 @@ def decrypt(de_text, de_shift):
 
 # encrypt(text, shift) if type_of_encode == 'encode' else decrypt(text, shift)
 
-caesar(text = o_text, shift = o_shift, type_of = type_of_encode)
+keep_going = 'yes'
+while keep_going == 'yes':
+    type_of_encode = input('Type "encode" to encrypt, type "decode" to decrypt:\n').lower()
+    o_text = input('Type your message:\n').lower()
+    o_shift = int(input('Type the shift number:\n'))
+    caesar(text = o_text, shift = o_shift, type_of = type_of_encode)
+    keep_going = input('Type "yes" if you want to go again. Otherwise type "no".\n').lower()
