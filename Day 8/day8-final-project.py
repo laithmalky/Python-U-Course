@@ -117,3 +117,5 @@ while keep_going == 'yes':
     o_shift = int(input('Type the shift number:\n'))
     caesar(text = o_text, shift = o_shift, type_of = type_of_encode)
     keep_going = input('Type "yes" if you want to go again. Otherwise type "no".\n').lower()
+    if keep_going == 'no':
+        print('Goodbye')
