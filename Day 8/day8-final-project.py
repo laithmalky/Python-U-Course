@@ -44,6 +44,7 @@ def encrypt(en_text, en_shift):
             encrypted_text += letter
     print(f'The encoded text is: {encrypted_text}')
 
+'''
 def decrypt(de_text, de_shift):
     decrypted_text = ''
     for letter in de_text:
@@ -57,6 +58,18 @@ def decrypt(de_text, de_shift):
             decrypted_text += letter
     print(f'The decoded text is: {decrypted_text}')
 
+'''
+
+def decrypt(de_text, de_shift):
+    decrypted_text = ''
+    for letter in de_text:
+        if letter in letters:
+            shifted_position = letters.index(letter) - de_shift
+            shifted_position %= len(letters) 
+            decrypted_text += letters[shifted_position]
+        else:
+            decrypted_text += letter
+    print(f'The decoded text is: {decrypted_text}')
 
 # encrypt(text, shift) if type_of_encode == 'encode' else decrypt(text, shift)
 
