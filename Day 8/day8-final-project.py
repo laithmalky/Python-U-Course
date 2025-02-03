@@ -35,7 +35,7 @@ def caesar(text, shift, type_of):
             encrypted_text += letters[shifted_position]
         else:
             encrypted_text += letter
-    print(f'The encoded text is: {encrypted_text}')
+    print(f'The {type_of}d text is: {encrypted_text}')
         
 
 
