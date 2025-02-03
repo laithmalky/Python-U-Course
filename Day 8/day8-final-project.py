@@ -10,6 +10,7 @@ o_text = input('Type your message:\n').lower()
 
 o_shift = int(input('Type the shift number:\n'))
 
+'''
 def caesar(text, shift, type_of):
     if type_of == 'encode':
         encrypt(en_text = text, en_shift = shift)
@@ -19,6 +20,26 @@ def caesar(text, shift, type_of):
         print('Invalid input')
 
 '''
+def caesar(text, shift, type_of):
+    encrypted_text = ''
+    for letter in text:
+        if letter in letters:
+            if type_of == 'encode':
+                shifted_position = letters.index(letter) + shift
+            elif type_of == 'decode':
+                shifted_position = letters.index(letter) - shift
+            else:
+                print('Invalid input')
+
+            shifted_position %= len(letters) 
+            encrypted_text += letters[shifted_position]
+        else:
+            encrypted_text += letter
+    print(f'The encoded text is: {encrypted_text}')
+        
+
+
+''' ############### 1st way to encrypt and decrypt #################
 def encrypt(en_text, en_shift):
     encrypted_text = ''
     for letter in en_text:
@@ -33,6 +54,8 @@ def encrypt(en_text, en_shift):
     print(f'The encoded text is: {encrypted_text}')
 '''
     
+
+'''  ############### 2nd way to encrypt and decrypt #################
 def encrypt(en_text, en_shift):
     encrypted_text = ''
     for letter in en_text:
@@ -43,8 +66,10 @@ def encrypt(en_text, en_shift):
         else:
             encrypted_text += letter
     print(f'The encoded text is: {encrypted_text}')
-
 '''
+
+
+''' ############### 1st way to decrypt #################
 def decrypt(de_text, de_shift):
     decrypted_text = ''
     for letter in de_text:
@@ -60,6 +85,7 @@ def decrypt(de_text, de_shift):
 
 '''
 
+''' ############### 2nd way to decrypt #################
 def decrypt(de_text, de_shift):
     decrypted_text = ''
     for letter in de_text:
@@ -70,6 +96,10 @@ def decrypt(de_text, de_shift):
         else:
             decrypted_text += letter
     print(f'The decoded text is: {decrypted_text}')
+
+'''
+
+
 
 # encrypt(text, shift) if type_of_encode == 'encode' else decrypt(text, shift)
 
