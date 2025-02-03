@@ -18,7 +18,7 @@ def caesar(text, shift, type_of):
     else:
         print('Invalid input')
 
-
+'''
 def encrypt(en_text, en_shift):
     encrypted_text = ''
     for letter in en_text:
@@ -28,6 +28,18 @@ def encrypt(en_text, en_shift):
             if new_position > 25:
                 new_position = new_position - 26
             encrypted_text += letters[new_position]
+        else:
+            encrypted_text += letter
+    print(f'The encoded text is: {encrypted_text}')
+'''
+    
+def encrypt(en_text, en_shift):
+    encrypted_text = ''
+    for letter in en_text:
+        if letter in letters:
+            shifted_position = letters.index(letter) + en_shift
+            shifted_position %= len(letters) 
+            encrypted_text += letters[shifted_position]
         else:
             encrypted_text += letter
     print(f'The encoded text is: {encrypted_text}')
