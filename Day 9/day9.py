@@ -8,3 +8,7 @@ first_dictionary = {"Bug": "An error in a program that prevents it from running 
 # you can access the value by using the key
 
 print(first_dictionary["Bug"])
+
+first_dictionary[123] = "This is a number"
+print(first_dictionary[123])
+print(first_dictionary)
