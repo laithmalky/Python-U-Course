@@ -21,6 +21,10 @@ empty_dictionary["key"] = "value"
 print(empty_dictionary)
 
 
+# you can edit the value of a key in the dictionary
+empty_dictionary["key"] = "new value"
+print(empty_dictionary)
+
 # you can also clear the dictionary
 empty_dictionary = {}
 print(empty_dictionary)
