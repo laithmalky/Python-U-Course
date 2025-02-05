@@ -60,3 +60,20 @@ for grade in student_scores:
         student_grades[grade] = "Fail"
 
 print(student_grades)
+
+
+# Simple way 
+capitals = {
+    "France": "Paris",
+    "Germany": "Berlin"
+}
+
+# Nesting a list in a dictionary
+travel_log = {
+    "France": ["Paris", "Lille", "Dijon"],
+    "Germany": ["Berlin", "Hamburg", "Stuttgart"]
+}
+
+# How to get inside the list that inside the dictionary
+print(travel_log["France"])
+print(travel_log["France"][1])
