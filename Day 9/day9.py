@@ -28,3 +28,10 @@ print(empty_dictionary)
 # you can also clear the dictionary
 empty_dictionary = {}
 print(empty_dictionary)
+
+
+# we can use for loop 
+for word in first_dictionary:
+    print(word)
+    print(first_dictionary[word])
+    
