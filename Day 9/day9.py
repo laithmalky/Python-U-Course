@@ -12,3 +12,15 @@ print(first_dictionary["Bug"])
 first_dictionary[123] = "This is a number"
 print(first_dictionary[123])
 print(first_dictionary)
+
+
+# you can create an empty dictionary and add values to it later
+
+empty_dictionary = {}
+empty_dictionary["key"] = "value"
+print(empty_dictionary)
+
+
+# you can also clear the dictionary
+empty_dictionary = {}
+print(empty_dictionary)
