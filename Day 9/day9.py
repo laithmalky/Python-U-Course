@@ -34,4 +34,29 @@ print(empty_dictionary)
 for word in first_dictionary:
     print(word)
     print(first_dictionary[word])
-    
+
+
+
+# First Task
+
+student_scores = {
+    'Harry': 88,
+    'Ron': 78,
+    'Hermione': 95,
+    'Draco': 75,
+    'Neville': 60
+}
+
+student_grades = {}
+
+for grade in student_scores:
+    if 91 <= student_scores[grade] <= 100:
+        student_grades[grade] = "Outstanding"
+    elif 81 <= student_scores[grade] <= 90:
+        student_grades[grade] = "Exceeds Expectations"
+    elif 71 <= student_scores[grade] <= 80:
+        student_grades[grade] = "Acceptable"
+    elif student_scores[grade] <= 70:
+        student_grades[grade] = "Fail"
+
+print(student_grades)
