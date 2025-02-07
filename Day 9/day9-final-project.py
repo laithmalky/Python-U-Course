@@ -26,6 +26,7 @@ while keep_going:
         if another_buyer.lower() == "no":
             keep_going = False
             uSure = False
+            print("\n" * 100)
             find_buyer(name, money)
         elif another_buyer.lower() == "yes":
             uSure = False
