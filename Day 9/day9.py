@@ -78,3 +78,8 @@ travel_log = {
 # How to get inside the list that inside the dictionary
 print(travel_log["France"])
 print(travel_log["France"][1])
+
+
+# How to access the items inside multible lists 
+nested_list = ["A", "B", ["C", "D"]]
+print(nested_list[2][1])
