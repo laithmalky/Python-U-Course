@@ -49,7 +49,7 @@ sentence = input("Enter a sentence: ")
 print(format_sentence(sentence))
 
 
-# use multible functions
+# use multiple functions
 def function1(word):
     return word + word
 
@@ -58,3 +58,17 @@ def function2(word):
 
 input_word = input("Enter a word: ")
 print(function2(function1(input_word)))
+
+# use multiple return
+def format_name(fname, lname):
+    if fname == "" or lname == "":
+        return "You didn't provide valid inputs."
+    # f_name = fname.capitalize()
+    # l_name = lname.capitalize()
+    # return f_name + " " + l_name
+    return f"Result: {fname.title()} {lname.title()}"
+
+first_name = input("Enter your first name: ")
+last_name = input("Enter your last name: ")
+
+print(format_name(first_name, last_name))
