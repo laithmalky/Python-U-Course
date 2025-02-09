@@ -77,7 +77,7 @@ print(format_name(first_name, last_name))
 
 
 # first example
-
+# leap year
 
 '''
 def is_leap_year(year):
@@ -102,3 +102,15 @@ def is_leap_year(year):
 
 print(is_leap_year(1989))
 
+
+
+
+# function inside a function
+
+def outer_function(a, b):
+    def inner_function(c, d):
+        return c + d
+    return inner_function(a, b)
+ 
+result = outer_function(5, 10)
+print(result)
