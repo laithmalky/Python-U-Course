@@ -24,7 +24,7 @@ def format_name(fname, lname):
 first_name = input("Enter your first name: ")
 last_name = input("Enter your last name: ")
 
-print(format_name(first_name, last_name))
+print(format_name(fname = first_name, lname = last_name))
 
 
 # efficient way
@@ -42,7 +42,7 @@ print(format_name(first_name, last_name))
 
 
 # for the sentence
-def format_sentence(sentence):
+def format_sentence(sentences):
     return sentence.title()
 
 sentence = input("Enter a sentence: ")
