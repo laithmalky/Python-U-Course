@@ -39,3 +39,11 @@ first_name = input("Enter your first name: ")
 last_name = input("Enter your last name: ")
 
 print(format_name(first_name, last_name))
+
+
+# for the sentence
+def format_sentence(sentence):
+    return sentence.title()
+
+sentence = input("Enter a sentence: ")
+print(format_sentence(sentence))
