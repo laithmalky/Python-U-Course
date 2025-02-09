@@ -47,3 +47,14 @@ def format_sentence(sentences):
 
 sentence = input("Enter a sentence: ")
 print(format_sentence(sentence))
+
+
+# use multible functions
+def function1(word):
+    return word + word
+
+def function2(word):
+    return word.title()
+
+input_word = input("Enter a word: ")
+print(function2(function1(input_word)))
