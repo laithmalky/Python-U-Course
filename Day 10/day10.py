@@ -1,4 +1,6 @@
 
+import calendar
+
 # Make the first letter of the first name and last name capital and the rest of the letters in lower case.
 
 # basic way
@@ -72,3 +74,31 @@ first_name = input("Enter your first name: ")
 last_name = input("Enter your last name: ")
 
 print(format_name(first_name, last_name))
+
+
+# first example
+
+
+'''
+def is_leap_year(year):
+    # Write your code here. 
+    # Don't change the function name.
+    is_right = False
+    if year % 4 == 0:
+        is_right = True
+    if year % 100 == 0:
+        is_right = False
+    if year % 400 == 0:
+        is_right = True
+    
+    return is_right
+'''
+
+def is_leap_year(year):
+    # Write your code here. 
+    # Don't change the function name.
+    return calendar.isleap(year)
+    
+
+print(is_leap_year(1989))
+
