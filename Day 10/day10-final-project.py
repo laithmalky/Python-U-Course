@@ -46,15 +46,19 @@ while in_go == 'y':
     
     print(f"{first_input} {calculat} {second_input} = {answer}")
     
-    in_go_check = input(f"Type 'y' to continue calculating with {answer}, or type 'n' to start a new calculation: ")
     
-    if in_go_check == 'y':
-        first_input = answer
-
-    elif in_go_check == 'n':
-        in_go = 'n'
-        print("Goodbye")
-    
-    else:
-        print("Invalid input")
+    for word in range(0,101):
+        
         in_go_check = input(f"Type 'y' to continue calculating with {answer}, or type 'n' to start a new calculation: ")
+
+        if in_go_check == 'y':
+            first_input = answer
+            break
+
+        elif in_go_check == 'n':
+            in_go = 'n'
+            print("Goodbye")
+            break
+    
+        else:
+            print("Invalid input")
