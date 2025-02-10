@@ -1,2 +1,5 @@
+from art import logo
 
-print('Wasap')
+print(logo)
+
+
