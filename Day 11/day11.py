@@ -83,5 +83,7 @@ def start_game():
 
         else:
             print("Invalid input! Please try again.")
-
+    
     game()
+
+game()
