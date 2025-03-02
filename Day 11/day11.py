@@ -10,12 +10,13 @@ def game():
         print('\n' * 100)
         print(art)
         print("Welcome to the game of Blackjack!")
+        start_game()
     elif game_start.lower() == 'n':
         print("Goodbye!")
     else:
         print("Invalid input! Please try again.")
 
-
+def start_game():
     user_cards = [choice(cards), choice(cards)]
     computer_cards = [choice(cards), choice(cards)]
 
