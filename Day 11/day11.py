@@ -17,6 +17,7 @@ def game():
         print("Invalid input! Please try again.")
         game()
 
+    
 def start_game():
     user_cards = [choice(cards), choice(cards)]
     computer_cards = [choice(cards), choice(cards)]
