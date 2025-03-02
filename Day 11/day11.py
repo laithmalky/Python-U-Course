@@ -63,7 +63,10 @@ def start_game():
         print(f"Your cards: {user_cards}, current score: {calculate_score(user_cards)}")
         print(f"Computer's cards: {computer_cards}, current score: {calculate_score(computer_cards)}")
 
-    
+    def computer_turn_loop():
+        for i in range(sum(computer_cards)):
+            computer_turn()
+
     Keep_running = True
 
     while Keep_running:
@@ -73,14 +76,16 @@ def start_game():
         user_input = input("Type 'y' to get another card, type 'n' to pass: ")
 
         if user_input == 'n':
-            for i in range(sum(computer_cards)):
-                computer_turn()
             sums()
             printing()
             Keep_running = False
 
         elif user_input == 'y' and sum(user_cards) < 21:
             user_cards.append(choice(cards))
+            if sum(user_cards) > 21:
+                sums()
+                printing()
+                Keep_running = False
 
         elif user_input == 'y' and sum(user_cards) > 21:
             sums()
@@ -89,6 +94,8 @@ def start_game():
 
         else:
             print("Invalid input! Please try again.")
+        
+        computer_turn_loop()
     
     game()
 
