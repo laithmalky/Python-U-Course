@@ -23,7 +23,7 @@ def start_game():
     computer_cards = [choice(cards), choice(cards)]
 
     def computer_turn():
-        while sum(computer_cards) <= 17:
+        while sum(computer_cards) < 17:
             computer_cards.append(choice(cards))
 
     def calculate_score(cards):
