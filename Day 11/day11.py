@@ -35,7 +35,9 @@ def start_game():
             return sum(cards)
         
     def compare(user_sum, computer_sum):
-        if computer_sum > user_sum and computer_sum <= 21:
+        if user_sum == computer_sum and user_sum <= 21:
+            print("It's a draw!")
+        elif computer_sum > user_sum and computer_sum <= 21:
             print("Computer wins!")
         elif user_sum > computer_sum and user_sum <= 21:
             print("You win!")
@@ -43,8 +45,7 @@ def start_game():
             print("You went over. Computer wins!")
         elif computer_sum > 21:
             print("Computer went over. You win!")
-        elif user_sum == computer_sum and user_sum <= 21:
-            print("It's a draw!")
+        
         
 
     # num_user_cards = len(user_cards)
@@ -62,7 +63,7 @@ def start_game():
         print(f"Your cards: {user_cards}, current score: {calculate_score(user_cards)}")
         print(f"Computer's first card: {computer_cards[0]}")
         user_input = input("Type 'y' to get another card, type 'n' to pass: ")
-        
+
         if user_input == 'n':
             sums()
             for i in range(sum(computer_cards)):
