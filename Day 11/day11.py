@@ -36,7 +36,9 @@ def start_game():
         
     def compare(user_sum, computer_sum):
         if user_sum == computer_sum and user_sum <= 21:
-            print("It's a draw!")
+            print("It's a draw! Less than 21.")
+        elif user_sum == computer_sum and user_sum > 21:
+            print("It's a draw! More than 21.")
         elif computer_sum > user_sum and computer_sum <= 21:
             print("Computer wins!")
         elif user_sum > computer_sum and user_sum <= 21:
