@@ -22,6 +22,10 @@ def start_game():
     user_cards = [choice(cards), choice(cards)]
     computer_cards = [choice(cards), choice(cards)]
 
+    def computer_turn():
+        while sum(computer_cards) < 17:
+            computer_cards.append(choice(cards))
+
     def calculate_score(cards):
         if 11 in cards and sum(cards) > 21:
             the_sum = sum(cards) - 10
@@ -57,14 +61,18 @@ def start_game():
     def printing():
         print(f"Your cards: {user_cards}, current score: {calculate_score(user_cards)}")
         print(f"Computer's first card: {computer_cards[0]}")
+    
+    Keep_running = True
 
-    while 0 < sum(user_cards) < 21:
+    while Keep_running:
         printing()
         user_input = input("Type 'y' to get another card, type 'n' to pass: ")
         if user_input == 'n':
             sums()
+            for i in range(sum(computer_cards)):
+                computer_turn()
             printing()
-            break
+            Keep_running = False
         elif user_input == 'y' and sum(user_cards) < 21:
             user_cards.append(choice(cards))
         elif user_input == 'y' and sum(user_cards) > 21:
