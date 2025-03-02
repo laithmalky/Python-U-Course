@@ -66,9 +66,9 @@ def start_game():
         user_input = input("Type 'y' to get another card, type 'n' to pass: ")
 
         if user_input == 'n':
-            sums()
             for i in range(sum(computer_cards)):
                 computer_turn()
+            sums()
             print(f"Your cards: {user_cards}, current score: {calculate_score(user_cards)}")
             print(f"Computer's cards: {computer_cards}, current score: {calculate_score(computer_cards)}")
             Keep_running = False
