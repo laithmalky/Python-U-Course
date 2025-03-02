@@ -51,16 +51,23 @@ def game():
         computer_sum = calculate_score(computer_cards)
         compare(user_sum, computer_sum)
         
-
-    while 0 < sum(user_cards) < 21:
+    def printing():
         print(f"Your cards: {user_cards}, current score: {calculate_score(user_cards)}")
         print(f"Computer's first card: {computer_cards[0]}")
+
+    while 0 < sum(user_cards) < 21:
+        printing()
         user_input = input("Type 'y' to get another card, type 'n' to pass: ")
         if user_input == 'n':
             sums()
+            printing()
             break
-        elif user_input == 'y':
+        elif user_input == 'y' and sum(user_cards) < 21:
             user_cards.append(choice(cards))
+        elif user_input == 'y' and sum(user_cards) > 21:
+            sums()
+            printing()
+            break
         else:
             print("Invalid input! Please try again.")
 
