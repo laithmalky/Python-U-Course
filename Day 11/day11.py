@@ -62,7 +62,6 @@ def start_game():
     def printing():
         print(f"Your cards: {user_cards}, current score: {calculate_score(user_cards)}")
         print(f"Computer's cards: {computer_cards}, current score: {calculate_score(computer_cards)}")
-        Keep_running = False
 
     
     Keep_running = True
@@ -78,6 +77,7 @@ def start_game():
                 computer_turn()
             sums()
             printing()
+            Keep_running = False
 
         elif user_input == 'y' and sum(user_cards) < 21:
             user_cards.append(choice(cards))
@@ -85,6 +85,7 @@ def start_game():
         elif user_input == 'y' and sum(user_cards) > 21:
             sums()
             printing()
+            Keep_running = False
 
         else:
             print("Invalid input! Please try again.")
