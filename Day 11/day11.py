@@ -54,27 +54,32 @@ def start_game():
         computer_sum = calculate_score(computer_cards)
         compare(user_sum, computer_sum)
         
-    def printing():
-        print(f"Your cards: {user_cards}, current score: {calculate_score(user_cards)}")
-        print(f"Computer's first card: {computer_cards[0]}")
+
     
     Keep_running = True
 
     while Keep_running:
-        printing()
+        print(f"Your cards: {user_cards}, current score: {calculate_score(user_cards)}")
+        print(f"Computer's first card: {computer_cards[0]}")
         user_input = input("Type 'y' to get another card, type 'n' to pass: ")
+        
         if user_input == 'n':
             sums()
             for i in range(sum(computer_cards)):
                 computer_turn()
-            printing()
+            print(f"Your cards: {user_cards}, current score: {calculate_score(user_cards)}")
+            print(f"Computer's cards: {computer_cards}, current score: {calculate_score(computer_cards)}")
             Keep_running = False
+
         elif user_input == 'y' and sum(user_cards) < 21:
             user_cards.append(choice(cards))
+
         elif user_input == 'y' and sum(user_cards) > 21:
             sums()
-            printing()
+            print(f"Your cards: {user_cards}, current score: {calculate_score(user_cards)}")
+            print(f"Computer's cards: {computer_cards}, current score: {calculate_score(computer_cards)}")
             Keep_running = False
+
         else:
             print("Invalid input! Please try again.")
 
