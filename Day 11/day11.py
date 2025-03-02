@@ -82,7 +82,7 @@ def start_game():
 
         elif user_input == 'y' and sum(user_cards) < 21:
             user_cards.append(choice(cards))
-            if sum(user_cards) > 21:
+            if sum(user_cards) >= 21:
                 sums()
                 printing()
                 Keep_running = False
