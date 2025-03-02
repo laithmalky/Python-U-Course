@@ -23,7 +23,7 @@ def start_game():
     computer_cards = [choice(cards), choice(cards)]
 
     def computer_turn():
-        while sum(computer_cards) < 17:
+        while sum(computer_cards) <= 17:
             computer_cards.append(choice(cards))
 
     def calculate_score(cards):
@@ -62,6 +62,7 @@ def start_game():
     while Keep_running:
         print(f"Your cards: {user_cards}, current score: {calculate_score(user_cards)}")
         print(f"Computer's first card: {computer_cards[0]}")
+        
         user_input = input("Type 'y' to get another card, type 'n' to pass: ")
 
         if user_input == 'n':
