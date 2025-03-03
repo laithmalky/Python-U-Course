@@ -20,13 +20,16 @@ def game():
     
 def start_game():
 
+    # Take a random card from the cards list
     user_cards = [choice(cards), choice(cards)]
     computer_cards = [choice(cards), choice(cards)]
 
+    # the computer can draw cards until the sum of the cards is less than 17
     def computer_turn():
         while sum(computer_cards) < 17:
             computer_cards.append(choice(cards))
 
+    # Calculate the score of the cards and see if there is an (A) ace (11) in the cards
     def calculate_score(cards):
         if 11 in cards and sum(cards) > 21:
             the_sum = sum(cards) - 10
@@ -35,6 +38,7 @@ def start_game():
         else:
             return sum(cards)
         
+    # Compare the scores of the user and the computer
     def compare(user_sum, computer_sum):
         if user_sum == computer_sum and user_sum <= 21:
             print("It's a draw! Less than 21.")
