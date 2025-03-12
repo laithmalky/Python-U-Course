@@ -21,6 +21,7 @@ def calculate_score(cards):
 
 user_cards = []
 computer_cards = []
+computer_score = -1
 is_game_over = False
 
 
@@ -31,7 +32,7 @@ for i in range(2):
     user_cards.append(deal_cards())
     computer_cards.append(deal_cards())
     
-    
+
 while not is_game_over:
     user_score = calculate_score(user_cards)
     computer_score = calculate_score(computer_cards)
@@ -48,3 +49,8 @@ while not is_game_over:
             user_cards.append(deal_cards())
         else:
             is_game_over = True
+
+
+while computer_score != 0 and computer_score < 17:
+    computer_cards.append(deal_cards())
+    computer_score = calculate_score(computer_cards)
