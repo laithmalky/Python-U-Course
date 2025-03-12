@@ -19,18 +19,18 @@ def calculate_score(cards):
     return sum(cards) 
 
 
-def compare(user_score, computer_score):
-    if user_score == computer_score:
+def compare(u_score, c_score):
+    if u_score == c_score:
         return "It's a draw!"
-    elif computer_score == 0:
+    elif c_score == 0:
         return "Computer wins with a Blackjack!"
-    elif user_score == 0:
+    elif u_score == 0:
         return "You win with a Blackjack!"
-    elif user_score > 21:
+    elif u_score > 21:
         return "You went over. Computer wins!"
-    elif computer_score > 21:
+    elif c_score > 21:
         return "Computer went over. You win!"
-    elif user_score > computer_score:
+    elif u_score > c_score:
         return "You win!"
     else:
         return "You Lose!"
