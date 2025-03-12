@@ -21,6 +21,7 @@ def calculate_score(cards):
 
 user_cards = []
 computer_cards = []
+user_score = -1
 computer_score = -1
 is_game_over = False
 
