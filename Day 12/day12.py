@@ -63,3 +63,15 @@ def create_enemy():
     print(new_enemy) 
 
 # print(new_enemy) # This will not throw an error as new_enemy is available outside the if block.
+
+
+# Modifying Global Scope
+# Back to the original code
+enemies = 1
+
+def increase_enemies():
+    enemies += 1
+    print(f"Enemies inside function: {enemies}")
+
+increase_enemies()
+print(f"Enemies outside function: {enemies}")
