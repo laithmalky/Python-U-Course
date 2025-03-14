@@ -81,3 +81,16 @@ def increase_enemies():
 
 increase_enemies()
 print(f"Enemies outside function: {enemies}")
+
+
+
+# easier way to do this is to return the value from the function and assign it to the global variable
+enemies = 1
+
+def increase_enemies(enemy):
+    print(f"Enemies inside function: {enemies}")
+    return enemy + 1
+
+
+enemies = increase_enemies(enemies)
+print(f"Enemies outside function: {enemies}")
