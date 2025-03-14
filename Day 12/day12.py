@@ -70,6 +70,12 @@ def create_enemy():
 enemies = 1
 
 def increase_enemies():
+    # enemies = 2
+    # enemies = 0
+    # enemies += 1 
+    # This will throw an error as we are trying to modify a global variable inside a function. 
+    # so inside the function cant see the global variable
+    global enemies # This will allow us to modify the global variable inside the function.
     enemies += 1
     print(f"Enemies inside function: {enemies}")
 
