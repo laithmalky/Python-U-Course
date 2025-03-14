@@ -94,3 +94,17 @@ def increase_enemies(enemy):
 
 enemies = increase_enemies(enemies)
 print(f"Enemies outside function: {enemies}")
+
+
+# Global Constants
+# Constants are variables that should not be modified.
+# In Python, constants are usually declared in all capital letters.
+PI = 3.14159
+
+
+
+
+def my_func():
+    print(f"Value of PI inside function: {PI}")
+
+my_func()
